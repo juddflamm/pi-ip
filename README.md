@@ -45,6 +45,6 @@ IP wlan0: disconnected
 2. Set the script to run on startup: `sudo update-rc.d pi-ip.sh defaults`
 3. Reboot your pi: `sudo reboot`
 
-### Future
+## Future
 Wireless Network Configuration stored in Firebase, and setup on the PI upon bootup using a wired connection, then auto reboot.
 
