@@ -14,24 +14,24 @@ Additionally, this module supports being installed on multiple Raspberry Pi's, a
 3. Configure pi-ip: `pi-ip config`
 4. Test it out: `pi-ip`
 
-You should see something like the following
-```
-Network Interfaces:
-{ lo: 
-   [ { address: '127.0.0.1',
-       netmask: '255.0.0.0',
-       family: 'IPv4',
-       mac: '00:00:00:00:00:00',
-       internal: true } ],
-  eth0: 
-   [ { address: '192.168.1.124',
-       netmask: '255.255.255.0',
-       family: 'IPv4',
-       mac: 'b8:27:eb:2f:a2:19',
-       internal: false } ] }
-IP eth0: 192.168.1.124
-IP wlan0: disconnected
-```
+   You should see something like the following
+   ```
+   Network Interfaces:
+   { lo: 
+      [ { address: '127.0.0.1',
+          netmask: '255.0.0.0',
+          family: 'IPv4',
+          mac: '00:00:00:00:00:00',
+          internal: true } ],
+     eth0: 
+      [ { address: '192.168.1.124',
+          netmask: '255.255.255.0',
+          family: 'IPv4',
+          mac: 'b8:27:eb:2f:a2:19',
+          internal: false } ] }
+   IP eth0: 192.168.1.124
+   IP wlan0: disconnected
+   ```
 
 ### Setup to Run on Startup
 
