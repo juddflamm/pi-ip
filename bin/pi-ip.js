@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-require('../lib/pi-ip.js').allTheThings();
+require('../lib/pi-ip.js').saveToFirebase();
