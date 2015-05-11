@@ -11,7 +11,7 @@ Additionally, this module supports being installed on multiple Raspberry Pi's, a
 
 1. Login to your raspberry pi
 2. Install pi-ip: `npm install -g pi-ip`
-3. Configure pi-ip `pi-ip config`
+3. Configure pi-ip: `pi-ip config`
 4. Test it out: `pi-ip`
 
 You should see something like the following
