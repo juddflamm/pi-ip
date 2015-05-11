@@ -14,8 +14,7 @@ Additionally, this module supports being installed on multiple Raspberry Pi's, a
 3. Configure pi-ip `pi-ip config`
 4. Test it out: `pi-ip`
 
-... You should see something like the following
-
+You should see something like the following
 ```
 Network Interfaces:
 { lo: 
