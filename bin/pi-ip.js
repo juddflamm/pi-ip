@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-require('../lib/pi-ip.js')();
+require('../lib/pi-ip.js').workIt();
