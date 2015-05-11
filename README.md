@@ -1,7 +1,7 @@
 # pi-ip
 
 ## What Is This?
-pi-ip is a global node module for installing on your Raspberry Pi, so that when it boots up it will report it's IP address in a cloud hosted Firebase database of your choosing.
+pi-ip is a global node module for installing on your Raspberry Pi, so that when it starts up it will report it's IP address in a cloud hosted Firebase database of your choosing.
 
 Additionally, this module supports being installed on multiple Raspberry Pi's, all with differently configured names.  All of the Pi IP addresses will be available in the same Firebase database.
 
@@ -34,9 +34,16 @@ IP eth0: 192.168.1.124
 IP wlan0: disconnected
 ```
 
-### Setup to Run on Bootup
+### Setup to Run on Startup
 
-1. 
+1. Create the init.d run script `/etc/init.d/pi-ip.sh` with the following contents:
+
+... ```
+#!/bin/bash
+pi-ip
+```
+
+2. Set the script to run on startup: `sudo update-rc.d pi-ip.sh defaults`
 
 ### Future
 Wireless Network Configuration stored in Firebase, and setup on the PI upon bootup using a wired connection, then auto reboot.
