@@ -1,2 +1,17 @@
 #!/usr/bin/env node
-require('../lib/pi-ip.js').saveToFirebase();
+
+var piIp = require('../lib/pi-ip.js');
+
+// Get command name
+var args = process.argv.splice(2);
+var commandName = args[0];
+
+if (commandName) {
+  if (commandName == "config") {
+    piIp.config();
+  } else {
+    console.log("invalid pi-ip command: " + commandName);
+  }
+} else {
+  piIp.saveToFirebase();
+}
