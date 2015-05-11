@@ -38,7 +38,7 @@ IP wlan0: disconnected
 
 1. Create the init.d run script `/etc/init.d/pi-ip.sh` with the following contents:
 
-... ```
+```
 #!/bin/bash
 pi-ip
 ```
