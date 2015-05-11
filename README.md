@@ -35,15 +35,16 @@ IP wlan0: disconnected
 
 ### Setup to Run on Startup
 
-1. Create the init.d run script `/etc/init.d/pi-ip.sh` with the following contents:
+1. Create an init.d run script `/etc/init.d/pi-ip.sh` with the following contents:
 
    ```
    #!/bin/bash
    pi-ip
    ```
 
-2. Set the script to run on startup: `sudo update-rc.d pi-ip.sh defaults`
-3. Reboot your pi: `sudo reboot`
+2. Make sure the pi-ip.sh script is executable: `sudo chmod ugoa+rx /etc/init.d/pi-ip.sh`
+3. Set the script to run on startup: `sudo update-rc.d pi-ip.sh defaults`
+4. Reboot your pi: `sudo reboot`
 
 ## Future
 Wireless Network Configuration stored in Firebase, and setup on the PI upon bootup using a wired connection, then auto reboot.
