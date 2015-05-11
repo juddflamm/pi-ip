@@ -17,8 +17,8 @@ var os = require("os");
 var Firebase = require("firebase");
 
 // Configuration
-var myFirebaseName = "fluxcapacitor"; // the name of your firebase db
-var myPiName = "Bloo"; // give your Pi a name
+var myFirebaseName = "name-of-your-firebase-db"; // the name of your firebase db
+var myPiName = "name-of-your-pi"; // give your Pi a name
 
 // Get IP Addresses
 console.log("Network Interfaces:");
