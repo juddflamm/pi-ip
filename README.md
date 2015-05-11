@@ -6,8 +6,28 @@ Additionally, this module supports being installed on multiple Raspberry Pi's, a
 ###Setup
 On the Pi...
 
-1. `cd /etc/`
-2. `sudo npm install pi-ip`
+1. Login to your raspberry pi
+2. Install pi-ip: `npm install -g pi-ip`
+3. Configure pi-ip `pi-ip config`
+4. Test it out: `pi-ip`
+...You should see something like the following
+```
+Network Interfaces:
+{ lo: 
+   [ { address: '127.0.0.1',
+       netmask: '255.0.0.0',
+       family: 'IPv4',
+       mac: '00:00:00:00:00:00',
+       internal: true } ],
+  eth0: 
+   [ { address: '192.168.1.124',
+       netmask: '255.255.255.0',
+       family: 'IPv4',
+       mac: 'b8:27:eb:2f:a2:19',
+       internal: false } ] }
+IP eth0: 192.168.1.124
+IP wlan0: disconnected
+```
 
 ###Future
 Wireless Network Configuration stored in Firebase, and setup on the PI upon bootup using a wired connection, then auto reboot.
