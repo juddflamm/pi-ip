@@ -1,16 +1,21 @@
 # pi-ip
-This is a Node Module for installing on your Raspberry Pi, so that when it boots up it will report it's IP Address to you, in a cloud hosted Firebase database of your choosing.
 
-Additionally, this module supports being installed on multiple Raspberry Pi's, all with differently configured names.  All Pi IP data will be available in the same Firebase database.
+## What Is This?
+pi-ip is a global node module for installing on your Raspberry Pi, so that when it boots up it will report it's IP address in a cloud hosted Firebase database of your choosing.
 
-###Setup
-On the Pi...
+Additionally, this module supports being installed on multiple Raspberry Pi's, all with differently configured names.  All of the Pi IP addresses will be available in the same Firebase database.
+
+## Setup
+
+### Install & Configure pi-ip
 
 1. Login to your raspberry pi
 2. Install pi-ip: `npm install -g pi-ip`
 3. Configure pi-ip `pi-ip config`
 4. Test it out: `pi-ip`
+
 ... You should see something like the following
+
 ```
 Network Interfaces:
 { lo: 
@@ -29,6 +34,10 @@ IP eth0: 192.168.1.124
 IP wlan0: disconnected
 ```
 
-###Future
+### Setup to Run on Bootup
+
+1. 
+
+### Future
 Wireless Network Configuration stored in Firebase, and setup on the PI upon bootup using a wired connection, then auto reboot.
 
