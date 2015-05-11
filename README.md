@@ -10,7 +10,7 @@ On the Pi...
 2. Install pi-ip: `npm install -g pi-ip`
 3. Configure pi-ip `pi-ip config`
 4. Test it out: `pi-ip`
-...You should see something like the following
+... You should see something like the following
 ```
 Network Interfaces:
 { lo: 
