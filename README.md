@@ -46,6 +46,19 @@ IP wlan0: disconnected
 2. Make sure the pi-ip.sh script is executable: `sudo chmod ugoa+rx /etc/init.d/pi-ip.sh`
 3. Set the script to run on startup: `sudo update-rc.d pi-ip.sh defaults`
 4. Reboot your pi: `sudo reboot`
+5. Watch your Firebase database for updates!  The database will have a node named `Pi`, with a node for each Pi within it.  The JSON would look something like this:
+
+   ```
+   {
+     "Pi" : {
+       "my-pi" : {
+         "eth0" : "192.168.1.124",
+         "utc" : "2015-05-11 07:21:45",
+         "wlan0" : "192.168.1.126"
+       }
+     }
+   }
+   ```
 
 ## Future
 Wireless Network Configuration stored in Firebase, and setup on the PI upon bootup using a wired connection, then auto reboot.
