@@ -1,6 +1,6 @@
 {
   "name": "pi-ip",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Upon bootup, saves the Pi's IP Address to Firebase, to make it easy to find.",
   "main": "index.js",
   "scripts": {

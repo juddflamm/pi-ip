@@ -1,10 +1,10 @@
 //
-// Node Module to ease finding out 
+// Node Module to ease finding out
 // the IP Address of your Raspberry Pi
 //
 // Setup:
 // This module writes to a Firebase hosted database.
-// - Update the variable myFirebaseName, below, with 
+// - Update the variable myFirebaseName, below, with
 // the name of your firebase database.
 // - Also, give your Pi a name, and put it in the
 // variable myPiName, below.
@@ -36,6 +36,3 @@ firebaseRef.set({"eth0": ipAddressEth0, "wlan0": ipAddressWlan0, "utc": new Date
   // Unless we exit; firebase will keep the app running forever
   process.exit();
 });
-
-
-
