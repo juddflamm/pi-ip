@@ -5,6 +5,7 @@ Additionally, this module supports being installed on multiple Raspberry Pi's, a
 
 ###Setup
 On the Pi...
+
 1. `cd /etc/`
 2. `sudo npm install pi-ip`
 
