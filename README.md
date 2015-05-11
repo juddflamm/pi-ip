@@ -5,9 +5,8 @@ Additionally, this module supports being installed on multiple Raspberry Pi's, a
 
 ###Setup
 On the Pi...
-* `cd /etc/`
-* `sudo npm install pi-ip`
-* 
+1. `cd /etc/`
+2. `sudo npm install pi-ip`
 
 ###Future
 Wireless Network Configuration stored in Firebase, and setup on the PI upon bootup using a wired connection, then auto reboot.
