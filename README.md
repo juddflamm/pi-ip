@@ -39,7 +39,7 @@ IP wlan0: disconnected
 
    ```
    #!/bin/bash
-   export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games:/opt/node/bin"
+   export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/node/bin"
    pi-ip
    ```
 
