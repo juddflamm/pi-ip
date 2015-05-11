@@ -1,0 +1,31 @@
+{
+  "name": "pi-ip",
+  "version": "1.0.0",
+  "description": "Upon bootup, saves the Pi's IP Address to Firebase, to make it easy to find.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kd7yva/pi-ip"
+  },
+  "keywords": [
+    "Raspberry",
+    "Pi",
+    "Firebase",
+    "IP",
+    "Address",
+    "Bootup",
+    "Config"
+  ],
+  "author": "Judd Flamm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kd7yva/pi-ip/issues"
+  },
+  "homepage": "https://github.com/kd7yva/pi-ip",
+  "dependencies": {
+    "firebase": "^2.2.4"
+  }
+}
