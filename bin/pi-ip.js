@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 var piIp = require('../lib/pi-ip.js');
 
 // Get command name
