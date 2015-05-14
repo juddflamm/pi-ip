@@ -7,7 +7,7 @@ var commandName = args[0];
 
 if (commandName) {
   if (commandName == "config") {
-    piIp.config();
+    piIp.configure();
   } else {
     console.log("invalid pi-ip command: " + commandName);
   }
