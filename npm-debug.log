@@ -1,0 +1,106 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/Judd/.nvm/versions/node/v0.12.1/bin/node',
+1 verbose cli   '/Users/Judd/.nvm/versions/node/v0.12.1/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@2.5.1
+3 info using node@v0.12.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec { raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/Judd/Pi/pi-ip',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/Judd/.npm/pi-ip/2.0.20/package.tgz not in flight; packing
+9 verbose tar pack [ '/Users/Judd/.npm/pi-ip/2.0.20/package.tgz',
+9 verbose tar pack   '/Users/Judd/Pi/pi-ip' ]
+10 verbose tarball /Users/Judd/.npm/pi-ip/2.0.20/package.tgz
+11 verbose folder /Users/Judd/Pi/pi-ip
+12 info prepublish pi-ip@2.0.20
+13 verbose addLocalTarball adding from inside cache /Users/Judd/.npm/pi-ip/2.0.20/package.tgz
+14 silly cache afterAdd pi-ip@2.0.20
+15 verbose afterAdd /Users/Judd/.npm/pi-ip/2.0.20/package/package.json not in flight; writing
+16 verbose afterAdd /Users/Judd/.npm/pi-ip/2.0.20/package/package.json written
+17 silly publish { name: 'pi-ip',
+17 silly publish   version: '2.0.20',
+17 silly publish   description: 'Global nodejs module that upon boot saves the Pi\'s IP Address to Firebase, to make it easy to find.',
+17 silly publish   main: './lib/pi-ip.js',
+17 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+17 silly publish   repository: { type: 'git', url: 'https://github.com/kd7yva/pi-ip' },
+17 silly publish   keywords:
+17 silly publish    [ 'Raspberry',
+17 silly publish      'Pi',
+17 silly publish      'Firebase',
+17 silly publish      'IP',
+17 silly publish      'Address',
+17 silly publish      'Bootup',
+17 silly publish      'Config' ],
+17 silly publish   author: { name: 'Judd Flamm' },
+17 silly publish   license: 'MIT',
+17 silly publish   bugs: { url: 'https://github.com/kd7yva/pi-ip/issues' },
+17 silly publish   homepage: 'https://github.com/kd7yva/pi-ip',
+17 silly publish   dependencies:
+17 silly publish    { firebase: '^2.2.4',
+17 silly publish      jsonfile: '^2.0.0',
+17 silly publish      'readline-sync': '^1.2.14' },
+17 silly publish   files: [ 'config.json', 'lib', 'bin' ],
+17 silly publish   bin: { 'pi-ip': 'bin/pi-ip.js' },
+17 silly publish   os: [ 'darwin', 'linux' ],
+17 silly publish   preferGlobal: true,
+17 silly publish   gitHead: '6c48b33f3bbbab953520819b84b3a534c7331016',
+17 silly publish   readme: '# pi-ip\n\n## What Is This?\npi-ip is a global node module for installing on your Raspberry Pi, so that when it starts up it will report it\'s IP address in a cloud hosted Firebase database of your choosing.\n\nAdditionally, this module supports being installed on multiple Raspberry Pi\'s, all with differently configured names.  All of the Pi IP addresses will be available in the same Firebase database.\n\n## Setup\n\n### Install & Configure pi-ip\n\n1. Login to your raspberry pi\n2. Install pi-ip: `npm install -g pi-ip`\n3. Configure pi-ip: `pi-ip config`\n4. Test it out: `pi-ip`\n\n   You should see something like the following\n   ```\n   Network Interfaces:\n   { lo: \n      [ { address: \'127.0.0.1\',\n          netmask: \'255.0.0.0\',\n          family: \'IPv4\',\n          mac: \'00:00:00:00:00:00\',\n          internal: true } ],\n     eth0: \n      [ { address: \'192.168.1.124\',\n          netmask: \'255.255.255.0\',\n          family: \'IPv4\',\n          mac: \'b8:27:eb:2f:a2:19\',\n          internal: false } ] }\n   IP eth0: 192.168.1.124\n   IP wlan0: disconnected\n   ```\n\n### Setup to Run on Startup\n\n1. Create an init.d run script `/etc/init.d/pi-ip.sh` with the following contents:\n\n   ```\n   #!/bin/bash\n   export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/node/bin"\n   pi-ip\n   ```\n\n2. Make sure the pi-ip.sh script is executable: `sudo chmod ugoa+rx /etc/init.d/pi-ip.sh`\n3. Set the script to run on startup: `sudo update-rc.d pi-ip.sh defaults`\n4. Reboot your pi: `sudo reboot`\n5. Watch your Firebase database for updates!  The database will have a node named `Pi`, with a node for each Pi within it.  The JSON would look something like this:\n\n   ```\n   {\n     "Pi" : {\n       "my-pi" : {\n         "eth0" : "192.168.1.124",\n         "utc" : "2015-05-11 07:21:45",\n         "wlan0" : "192.168.1.126"\n       }\n     }\n   }\n   ```\n\n## Future\nWireless Network Configuration stored in Firebase, and setup on the PI upon bootup using a wired connection, then auto reboot.\n\n',
+17 silly publish   readmeFilename: 'README.md',
+17 silly publish   _id: 'pi-ip@2.0.20',
+17 silly publish   _shasum: '77d0930e4b69b0829e9d570b9b53b00d5df80d5d',
+17 silly publish   _from: '.' }
+18 silly mapToRegistry name pi-ip
+19 silly mapToRegistry using default registry
+20 silly mapToRegistry registry https://registry.npmjs.org/
+21 silly mapToRegistry uri https://registry.npmjs.org/pi-ip
+22 verbose publish registryBase https://registry.npmjs.org/
+23 silly publish uploading /Users/Judd/.npm/pi-ip/2.0.20/package.tgz
+24 verbose request uri https://registry.npmjs.org/pi-ip
+25 verbose request sending authorization for write operation
+26 info attempt registry request try #1 at 12:29:46 PM
+27 verbose request using bearer token for auth
+28 verbose request id 0bcf200803cbadd4
+29 http request PUT https://registry.npmjs.org/pi-ip
+30 http 403 https://registry.npmjs.org/pi-ip
+31 verbose headers { 'content-type': 'application/json',
+31 verbose headers   'cache-control': 'max-age=60',
+31 verbose headers   'content-length': '96',
+31 verbose headers   'accept-ranges': 'bytes',
+31 verbose headers   date: 'Fri, 15 May 2015 18:29:47 GMT',
+31 verbose headers   via: '1.1 varnish',
+31 verbose headers   connection: 'keep-alive',
+31 verbose headers   'x-served-by': 'cache-sjc3132-SJC',
+31 verbose headers   'x-cache': 'MISS',
+31 verbose headers   'x-cache-hits': '0',
+31 verbose headers   'x-timer': 'S1431714586.663628,VS0,VE963' }
+32 verbose request invalidating /Users/Judd/.npm/registry.npmjs.org/pi-ip on PUT
+33 error publish Failed PUT 403
+34 verbose stack Error: "You cannot publish over the previously published version 2.0.20." : pi-ip
+34 verbose stack     at CachingRegistryClient.<anonymous> (/Users/Judd/.nvm/versions/node/v0.12.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:254:14)
+34 verbose stack     at Request._callback (/Users/Judd/.nvm/versions/node/v0.12.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:178:14)
+34 verbose stack     at Request.self.callback (/Users/Judd/.nvm/versions/node/v0.12.1/lib/node_modules/npm/node_modules/request/request.js:344:22)
+34 verbose stack     at Request.emit (events.js:110:17)
+34 verbose stack     at Request.<anonymous> (/Users/Judd/.nvm/versions/node/v0.12.1/lib/node_modules/npm/node_modules/request/request.js:1239:14)
+34 verbose stack     at Request.emit (events.js:129:20)
+34 verbose stack     at IncomingMessage.<anonymous> (/Users/Judd/.nvm/versions/node/v0.12.1/lib/node_modules/npm/node_modules/request/request.js:1187:12)
+34 verbose stack     at IncomingMessage.emit (events.js:129:20)
+34 verbose stack     at _stream_readable.js:908:16
+34 verbose stack     at process._tickCallback (node.js:355:11)
+35 verbose statusCode 403
+36 verbose pkgid pi-ip
+37 verbose cwd /Users/Judd/Pi/pi-ip
+38 error Darwin 14.3.0
+39 error argv "/Users/Judd/.nvm/versions/node/v0.12.1/bin/node" "/Users/Judd/.nvm/versions/node/v0.12.1/bin/npm" "publish"
+40 error node v0.12.1
+41 error npm  v2.5.1
+42 error code E403
+43 error "You cannot publish over the previously published version 2.0.20." : pi-ip
+44 error If you need help, you may report this error at:
+44 error     <http://github.com/npm/npm/issues>
+45 verbose exit [ 1, true ]
