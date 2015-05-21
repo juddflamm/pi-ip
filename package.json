@@ -1,6 +1,6 @@
 {
   "name": "pi-ip",
-  "version": "2.0.21",
+  "version": "2.0.22",
   "description": "Global nodejs module that upon boot saves the Pi's IP Address to Firebase, to make it easy to find.",
   "main": "./lib/pi-ip.js",
   "scripts": {
@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/kd7yva/pi-ip",
   "dependencies": {
+    "bluebird": "^2.9.25",
     "firebase": "^2.2.4",
     "jsonfile": "^2.0.0",
     "readline-sync": "^1.2.14"

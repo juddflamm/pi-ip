@@ -3,6 +3,7 @@ var Pidentifier = require('../lib/pidentifier.js');
 var jsonFile = require('jsonfile');
 var readlineSync = require('readline-sync');
 var configFile = process.env.HOME + '/.pi-ip.json';
+var Promise = require("bluebird");
 
 // Get command name
 var args = process.argv.splice(2);
@@ -19,8 +20,15 @@ if (commandName) {
   if(!config) {
     console.log('No config found, try running `pi-ip config`')
   } else {
-    new Pidentifier(config).identify();
+    run();
   }
+}
+
+function run() {
+  new Pidentifier(config).identify().then(function(result){
+    console.log("Done with result:");
+    console.(result);
+  });
 }
 
 function readConfig () {
