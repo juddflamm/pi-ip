@@ -27,7 +27,7 @@ if (commandName) {
 function run() {
   new Pidentifier(config).identify().then(function(result){
     console.log("Done with result:");
-    console.(result);
+    console.log(result);
   });
 }
 
