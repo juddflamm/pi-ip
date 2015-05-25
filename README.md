@@ -5,6 +5,12 @@ pi-ip is a global node module for installing on your Raspberry Pi, so that when 
 
 Additionally, this module supports being installed on multiple Raspberry Pi's, all with differently configured names.  All of the Pi IP addresses will be available in the same Firebase database.
 
+## Prerequisites
+
+1. A raspberry pi
+2. NodeJS installed (some instructions: https://learn.adafruit.com/node-embedded-development/installing-node-dot-js)
+3. A Firebase account, and database (get started: https://www.firebase.com/)
+
 ## Setup
 
 ### Install & Configure pi-ip
@@ -18,6 +24,21 @@ Additionally, this module supports being installed on multiple Raspberry Pi's, a
    ```
    { connected: true, interfaces: { eth0: '192.168.1.119' } }
    ```
+   
+### Setup Wifi settings in Firebase
+
+Pi-ip also allows you to put your wifi ssid and password in Firebase, so that when you bootup on ethernet, pi-ip will configure your wifi automatically.  After the wifi is setup, pi-ip will update Firebase with the IP address of the wireless adapter.  To set this up, add the following JSON to your Firebase database:
+   ```
+   "pi-ip" : {
+      "wifi" : {
+         "ssid" : "REQUIRED SSID PROPERTY - your wifi network name",
+         "secret-wpa" : "OPTIONAL PASSWORD PROPERTY - if using WPA or WPA2 security",
+         "secret-wep" : "OPTIONAL PASSWORD PROPERTY - if using WEP security"
+      }
+   }
+   ```
+The `ssid` is required.  Though the `secret-wpa` and `secret-wep` are optional.
+(pi-ip will not configure the wifi if the pi is already connected to wifi.)
 
 ### Setup to Run on Startup
 
