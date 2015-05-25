@@ -84,7 +84,7 @@ The `ssid` is required.  Though the `secret-wpa` and `secret-wep` are optional.
    }
    ```
 
-### Alternate Configuration
+### Boot Partition Configuration
 
 If you have many Pi's that all need to be setup, it may be inconvenient to boot all of them, and run `pi-ip config` on each of them.
 
