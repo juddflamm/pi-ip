@@ -25,7 +25,23 @@ Additionally, this module supports being installed on multiple Raspberry Pi's, a
 
    ```
    #!/bin/bash
-   su pi -c 'pi-ip'
+
+   case "$1" in
+       start)
+       su pi -c 'pi-ip'
+       ;;
+       stop)
+       echo "Stop not supported"
+       ;;
+       restart)
+       echo "Restart not supported"
+       ;;
+       status)
+       echo "Status not supported"
+       ;;
+   esac
+   
+   exit 0
    ```
 
 2. Make sure the pi-ip.sh script is executable: `sudo chmod ugoa+rx /etc/init.d/pi-ip.sh`
