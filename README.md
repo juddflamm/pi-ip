@@ -8,8 +8,10 @@ Additionally, this module supports being installed on multiple Raspberry Pi's, a
 ## Prerequisites
 
 1. A raspberry pi
-2. NodeJS installed (some instructions: https://learn.adafruit.com/node-embedded-development/installing-node-dot-js)
-3. A Firebase account, and database (get started: https://www.firebase.com/)
+2. NodeJS installed
+   (some instructions: https://learn.adafruit.com/node-embedded-development/installing-node-dot-js)
+3. A Firebase account, and database
+   (get started: https://www.firebase.com/)
 
 ## Setup
 
