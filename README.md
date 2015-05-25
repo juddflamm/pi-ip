@@ -97,7 +97,3 @@ I have added an alternate way of configuring pi-ip for these scenarios.  Simply 
 (The boot partition is the one file system you see if you put your Pi's SD card into a Mac or Windows computer. If you are logged into the Pi via SSH, the boot partition can be found at `/boot/`.)
 
 pi-ip will look for the config file in the usual place first, `/home/pi/.pi-ip.json`, and then check `/boot/pi-ip.json`.  So if you want the boot partition version to be used, delete any existing `/home/pi/.pi-ip.json` file.
-
-## Future
-Wireless Network Configuration stored in Firebase, and setup on the PI upon bootup using a wired connection.
-
