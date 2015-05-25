@@ -50,6 +50,7 @@ function run() {
           child_process.execSync("wpa_cli enable_network 0", {"encoding": "utf8"});
           console.log("Attempting to connect to wireless network: " + wifiConfig.ssid);
           setTimeout(function(){
+            child_process.execSync("wpa_cli save_config", {"encoding": "utf8"});
             new Pidentifier(config).identify()
             .then(function(newResult){
               // Log out results for visual display
