@@ -88,7 +88,7 @@ The `ssid` is required.  Though the `secret-wpa` and `secret-wep` are optional.
 
 If you have many Pi's that all need to be setup, it may be inconvenient to boot all of them, and run `pi-ip config` on each of them.
 
-I have added an alternate way of configuring pi-ip for these scenarios.  Simply create a file called `pi-ip.json` in the boot partition of the Pi's SD card and fill it with configure like so...
+I have added an alternate way of configuring pi-ip for these scenarios.  Simply create a file called `pi-ip.json` in the boot partition of the Pi's SD card and fill it with configuration like so...
    ```
    {"firebaseDb":"your-firebase-db-name-here","piName":"your-pi-name-here"}
    ```
