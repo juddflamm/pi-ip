@@ -25,9 +25,17 @@ if (commandName) {
 }
 
 function run() {
-  new Pidentifier(config).identify().then(function(result){
-    console.log("Done with result:");
+  new Pidentifier(config).identify()
+  .then(function(result){
+    // Log out results for visual display
     console.log(result);
+    return result;
+  })
+  .then(function(result){
+    if (!result.interfaces.wlan0) {
+      // try to config wifi
+      
+    }
   });
 }
 
