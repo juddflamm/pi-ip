@@ -33,18 +33,26 @@ function run() {
   })
   .then(function(result){
     if (!result.interfaces.wlan0) {
-      // try to config wifi
-      
+      // TODO try to config wifi
+
     }
   });
 }
 
 function readConfig () {
   try {
+    // Try reading config from saved config file
     config = jsonFile.readFileSync(configFile);
   } catch (err) {
-    // File not there yet - continue with the empty config above
-    console.log("Couldn't read JSON file: " + configFile);
+    // Try reading config from /boot/config.txt
+    try {
+      config = jsonFile.readFileSync('/boot/pi-ip.json');
+    } catch(err2) {
+      // fail through
+    }
+  }
+  if (!config) {
+    console.log("Couldn't read config data.  Try 'pi-ip config'");
   }
   return config;
 }
