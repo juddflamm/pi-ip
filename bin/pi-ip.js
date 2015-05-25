@@ -59,7 +59,7 @@ function readConfig () {
 
 function configure() {
   // Read Configuration
-  config = readConfig() || {};
+  config = {};
 
   config.firebaseDb = readlineSync.question("Please enter your Firebase db name: ");
   config.piName = readlineSync.question("Please enter a name for this Pi: ");
